@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        image_name="hayja500/lbg-api-app:latest"
+    }
     stages {
       stage('Test') {
             steps {
@@ -9,8 +12,11 @@ pipeline {
        }
        stage('Build') {
             steps {
-                //
-                sh "echo Build stage"
+                sh """
+                sh "echo Building image"
+                docker build -t $image_name .
+                echo
+                """
             }
         }
         stage('Deploy') {

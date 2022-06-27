@@ -1,0 +1,6 @@
+version: "18"
+
+services:
+   lbg-api-app-image
+	build
+  	

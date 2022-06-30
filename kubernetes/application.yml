@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:  
-name: lbg-api-app
+  name: lbg-api-app
   labels:
     app: lbg-api-app
 spec:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: lbg-api-app
-        image: gcr.io/lbg6-130622/lbg-api-app-<your_name>:latest
+        image: gcr.io/lbg6-130622/lbg-api-app-hayley:latest
         ports:
         - containerPort: 8080

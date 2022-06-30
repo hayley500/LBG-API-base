@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:  
-  name: lbg-api-app
+  name: lbg-api-app-hayley
   labels:
-    app: lbg-api-app
+    app: lbg-api-app-hayley
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: lbg-api-app
+      app: lbg-api-app-hayley
   template:
     metadata:
       labels:
-        app: lbg-api-app
+        app: lbg-api-app-hayley
     spec:
       containers:
-      - name: lbg-api-app
+      - name: lbg-api-app-hayley
         image: {{IMAGE_NAME}}
         ports:
         - containerPort: 8080
